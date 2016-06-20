@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 #MAINTAINER Reid Burke <me@reidburke.com>
-MAINTAINER Goran Stefkovski <gorans@gmail.com>
+MAINTAINER iDay <iday@gmail.com>
 
 RUN apt-get -q -y update \
     && apt-get -q -y install cron logrotate make build-essential libssl-dev \
