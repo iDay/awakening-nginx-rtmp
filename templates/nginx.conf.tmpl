@@ -165,7 +165,7 @@ rtmp {
             allow publish 127.0.0.1;
             deny publish all;
 
-             exec_pull /usr/local/bin/avconv -re -i rtsp://192.168.5.$name -filter:v scale=-1:460 -c:a libfdk_aac -b:a 128k -c:v libx264 -b:v 512k  -f flv rtmp://localhost/$app/$name
+             exec_pull /usr/local/bin/avconv -re -i ${RTSP_PATH_TEMPLATE} -filter:v scale=-1:460 -c:a libfdk_aac -b:a 128k -c:v libx264 -b:v 512k  -f flv rtmp://localhost/$app/$name;
 #            pull rtmp://localhost/pub_${PUBLISH_SECRET} live=1;
 
             wait_key on;
